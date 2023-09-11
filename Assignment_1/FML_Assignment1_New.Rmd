@@ -1,0 +1,52 @@
+---
+title: "FML"
+author: "Vivek Pamulaparthi"
+date: "2023-09-10"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+
+```{r}
+data(ElectricCarData)
+ElectricCarData
+
+```
+
+```{r}
+summary(ElectricCarData)
+
+```
+
+```{r}
+summary(ElectricCarData$Range_Km)
+summary(ElectricCarData$Model)
+
+```
+
+
+```{r}
+ElectricCarData$BodyStyle <-log(ElectricCarData$PriceEuro)
+summary(ElectricCarData$BodyStyle)
+
+```
+
+```{r}
+hist(ElectricCarData$Range_Km, 
+     main="Histogram of Range",
+     xlab="Range",
+     ylab="Vehicles",
+     col="blue",
+     border="black")
+
+```
+
+```{r}
+plot(ElectricCarData$Seats, ElectricCarData$PriceEuro,
+     main="Scatterplot of Plug Type vs. Range",
+     xlab="Plug Type",
+     ylab="Range",
+     col="red")
+```
+
